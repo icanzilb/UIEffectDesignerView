@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'EffectDesignerDemo_OSX' target in the 'EffectDesignerDemo_OSX' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
