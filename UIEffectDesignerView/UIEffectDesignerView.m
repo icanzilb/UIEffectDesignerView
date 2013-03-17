@@ -15,7 +15,6 @@
 // The MIT License in plain English: http://www.touch-code-magazine.com/JSONModel/MITLicense
 
 #import "UIEffectDesignerView.h"
-#import "QuartzCore/QuartzCore.h"
 #import "NSData+Base64.h"
 
 //the version this view is compatible with
@@ -27,7 +26,6 @@ static float kFileFormatVersionExpected = 0.1;
     CALayer* rootLayer;
 
     //emitter and effect data
-    CAEmitterLayer* _emitter;
     NSDictionary* effect;
 }
 
@@ -74,21 +72,21 @@ static float kFileFormatVersionExpected = 0.1;
         
         //initialize the emitter
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
-        _emitter = (CAEmitterLayer*)self.layer;
+        self.emitter = (CAEmitterLayer*)self.layer;
 #else
-        _emitter = [CAEmitterLayer layer];
+        self.emitter = [CAEmitterLayer layer];
 #endif
         
         //setup the emitter metrics
-        _emitter.emitterPosition = CGPointMake(self.bounds.size.width /2, self.bounds.size.height/2 );
-        _emitter.emitterSize = self.bounds.size;
+        self.emitter.emitterPosition = CGPointMake(self.bounds.size.width /2, self.bounds.size.height/2 );
+        self.emitter.emitterSize = self.bounds.size;
         
         //setup the emitter type and mode
         NSArray* kEmitterModes = @[kCAEmitterLayerUnordered, kCAEmitterLayerAdditive, kCAEmitterLayerOldestLast, kCAEmitterLayerOldestFirst];
-        _emitter.emitterMode = kEmitterModes[ [effect[@"emitterMode"] intValue] ];
+        self.emitter.emitterMode = kEmitterModes[ [effect[@"emitterMode"] intValue] ];
         
         NSArray* kEmitterTypes = @[kCAEmitterLayerRectangle, kCAEmitterLayerLine, kCAEmitterLayerPoint];
-        _emitter.emitterShape = kEmitterTypes[ [effect[@"emitterType"] intValue] ];
+        self.emitter.emitterShape = kEmitterTypes[ [effect[@"emitterType"] intValue] ];
         
         //create new emitter cell
         CAEmitterCell* emitterCell = [CAEmitterCell emitterCell];
@@ -160,7 +158,7 @@ static float kFileFormatVersionExpected = 0.1;
         emitterCell.blueSpeed = [effect[@"blueSpeed"] floatValue];
         
         //add the cell to the emitter layer
-        _emitter.emitterCells = @[emitterCell];
+        self.emitter.emitterCells = @[emitterCell];
         
 #pragma mark - OSX layer setup
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
@@ -168,14 +166,14 @@ static float kFileFormatVersionExpected = 0.1;
         //on OSX build the UI hierarchy to show particles
         
         rootLayer = [CALayer layer];
-        [rootLayer addSublayer:_emitter];
+        [rootLayer addSublayer:self.emitter];
         rootLayer.backgroundColor = [NSColor clearColor].CGColor;
         
         [self setLayer:rootLayer];
         [self setWantsLayer:YES];
 
         rootLayer.masksToBounds = NO;
-        _emitter.masksToBounds = NO;
+        self.emitter.masksToBounds = NO;
 
         //Force the view to update
         [self setNeedsDisplay:YES];
