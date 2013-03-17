@@ -3,12 +3,12 @@ UIEffectDesignerView
 
 A native Particle Systems effect view for iOS and OSX powered by QuartzCore.
 
-This is a companion Objective-C class to the [UIEffectDesigner](http://www.touch-code-magazine.com/uieffectsdesigner/) app.
+This is a companion Objective-C class to the [UIEffectDesigner](http://www.touch-code-magazine.com/uieffectdesigner/) app.
 
 UIEffectDesigner
 ======
 
-You can download the UIEffectDesigner app from [here](http://www.touch-code-magazine.com/uieffectsdesigner/) and design visually your effects:
+You can download the UIEffectDesigner app from [here](http://www.touch-code-magazine.com/uieffectdesigner/) and design visually your effects:
 
 ![image](http://www.touch-code-magazine.com/wp-content/themes/magazeen/uieffectdesigner/screen1.jpg?9d7bd4)
 
@@ -56,4 +56,4 @@ On the UIEffectDesigner page you can also download sample effects:
 
 ![image](http://www.touch-code-magazine.com/_uieffectdesigner/samples/soda.jpg?9d7bd4)
 
-Go to [UIEffectDesigner](http://www.touch-code-magazine.com/uieffectsdesigner/) page with sample effect files for download.
+Go to [UIEffectDesigner](http://www.touch-code-magazine.com/uieffectdesigner/) page with sample effect files for download.
