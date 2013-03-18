@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:UIEffectDesignerView"
+      name = "UIEffectDesignerView">
+      <FileRef
+         location = "group:NSData+Base64.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSData+Base64.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIEffectDesignerView.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIEffectDesignerView.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:EffectDesignerDemo_OSX/EffectDesignerDemo_OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:EffectDesignerDemo_iOS/EffectDesignerDemo_iOS.xcodeproj">
+   </FileRef>
+</Workspace>
