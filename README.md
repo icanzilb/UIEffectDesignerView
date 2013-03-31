@@ -45,6 +45,13 @@ Follow these 4 easy steps:
 
 That's it. You can work normally with the view - for example adjust its center property on iOS or change the frame, animate the effect around the screen, etc.
 
+For a full walk-through on creating particle systems and displaying them in a UIKit game for the iPhone check out this 2 part tutorial series:
+
+* [How to create particle system game effects with UIEffectDesigner Part 1 of 2](http://www.touch-code-magazine.com/how-to-create-particle-system-game-effects-with-uieffectdesigner-part-1-of-2/)
+
+* [How to create particle system game effects with UIEffectDesigner Part 2 of 2](http://www.touch-code-magazine.com/how-to-create-particle-system-game-effects-with-uieffectdesigner-part-2-of-2/)
+
+
 Samples
 ====
 
